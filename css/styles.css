@@ -3,6 +3,11 @@
 @import url('https://fonts.google.com/specimen/Abril+Fatface?query=abril&sidebar.open&selection.family=Abril+Fatface');
 *{
     font-family: 'Montserrat';
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none !important;
 }
 
 body {
@@ -12,6 +17,7 @@ body {
 
 html{
     scroll-behavior: smooth;
+    background:url(../images/background\ 4.gif);
 }
 
 /* tete de page */
@@ -19,7 +25,9 @@ html{
 header.header {
     display: flex;
     align-items: center;
-    background-color: #506b35;
+    background: rgba(0, 0, 0, 0.397);
+    width: 90%;
+    margin: auto;
 }
 
 header.header img{
@@ -27,23 +35,33 @@ header.header img{
 }
 
 section.top-page{
-    background:url("../images/bg1.jpg");
+    background:url("../images/bg4.gif");
     background-size: cover;
-    min-height: 100vh;
-    padding: 25px;
+    min-height: 80vh;
+    padding-top: 25px;
+    background-position: center;
+    
 }
 
 /* page de bienvenue (landing page) */
 
 .landing-page {
-    padding: 20px 50px
+    width: 100%;
+    margin: auto;
 }
 
 .big-tittle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
     color: floralwhite;
     font-size: 80px;
-    font-family: 'Abril fatFace',;
+    font-family: 'montserrat';
     font-weight: 600;
+    width: 90%;
+    margin: auto;
+    margin-top: 40px;
 }
 
 .scroll-down {
@@ -61,8 +79,8 @@ nav.nav {
     justify-content:flex-end;
     align-items: flex-end;
     list-style: none;
-    width: 100%;
-    margin-left: 4px;
+    width: 90%;
+    margin: auto;
 }
 
 nav.nav li,nav.nav a{
@@ -78,7 +96,9 @@ nav.nav li,nav.nav a{
 .services {
    display: flex;
    justify-content: space-between;
-   margin: 50px;
+   width: 90%;
+   margin: auto;
+   margin-top: 20px;
 }
 
 .service-item {
@@ -89,7 +109,15 @@ nav.nav li,nav.nav a{
 
 .delivery-icon {
     font-size: 50px;
-    color: #506b35;
+    color: #ffffff;
+    padding: 12px;
+    margin: 1.7rem;
+    background: rgba(0, 0, 0, 0.623);
+    color: floralwhite;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 
 }
 
@@ -97,6 +125,9 @@ nav.nav li,nav.nav a{
    font-weight: 600; 
    width: 200px;
    text-align: center;
+   background: rgb(255, 255, 255);
+   border-radius: 5px;
+   padding: 5px;
 }
 
 /* best sells */
@@ -118,12 +149,12 @@ nav.nav li,nav.nav a{
 }
 
 .bests-items {
-    margin: 50px;
+    width: 90%;
+    margin: auto;
 }
 
 
 .best-bluds {
-    background-color: crimson;
     min-height: 500px;
     display: flex;
     flex-wrap: wrap;
@@ -133,17 +164,26 @@ nav.nav li,nav.nav a{
     position: relative;
     background-size: cover;
     background-position: center;
+    color: black;
 }
 
 .no-grid {
     min-width: 350px;
     height: 500px;
     flex: 1;
+    margin: 10px;
+    border-radius: 10px;
+    transition: 0.5s all;
+}
+
+.no-grid:hover {
+    transform: scale(1.04);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19) ;
 }
 
 .plant1 {
     background-image: url(../images/nos_meilleures_ventes/sillykittycode4.jpg);
-}
+}   
 
 .plant2 {
     background-image: url(../images/nos_meilleures_ventes/blud2.jpg);
@@ -159,8 +199,7 @@ nav.nav li,nav.nav a{
     position: absolute;
     width: 100%;
     bottom: 0;
-    background-color: #FFFFFFDF;
-    padding: 5px 20px;
+    background-color:#ffffff00;
 }
 
 
@@ -168,20 +207,27 @@ nav.nav li,nav.nav a{
     font-size: 22px;
     font-weight: 600;
     line-height: 3px;
+    padding-left: 15px;
+    color: #ffffff;
 
 }
 
 .plant-price {
-    color: #ADD981;
-    line-height: 3px;
+    color: #ffffff;
+    width: fit-content;
     font-size: 14px;
     font-weight: 800;
+    margin-left: 15px;
+    padding: 3px;
+    background-color: rgba(0, 0, 0, 0.712);
+    border-radius: 5px;
 }
 
 /* nos bluds */
 
 .all-plants {
-    margin: 100px;
+    width: 90%; 
+    margin: auto;
 }
 
 .plant-grid {
@@ -189,40 +235,62 @@ nav.nav li,nav.nav a{
     min-height: 150vh;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 400px);
+   
+}
+
+.plant-grid1,.plant-grid2,.plant-grid3,.plant-grid4,.plant-grid5,.plant-grid6 {
+    transition: 0.5s all;
+}
+
+.plant-grid1:hover,.plant-grid2:hover,.plant-grid3:hover,.plant-grid4:hover,.plant-grid5:hover,.plant-grid6:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19) ;
 }
 
 .plant-grid1 {
     background-image: url(../images/nos_plantes/B1.jfif);
     grid-column: 1/3;
     grid-row: 1/3;
+    margin: 10px;
+    border-radius: 10px;
 }
 
 .plant-grid2 {
     background-image: url(../images/nos_plantes/S2.png);
     grid-column: 3/5;
+    margin: 10px;
+    border-radius: 10px;
 }
 
 .plant-grid3 {
     background-image: url(../images/nos_plantes/T3.jpg);
     grid-column: 3/5;
+    margin: 10px;
+    border-radius: 10px;
 }
 
 .plant-grid4 {
     background-image: url(../images/nos_plantes/Y4.gif);
     grid-column: 1;
     grid-row: 3/5;
+    margin: 10px;
+    border-radius: 10px;
 }
 
 .plant-grid5 {
     background-image: url(../images/nos_plantes/O5.jpg);
     grid-column: 2/4;
     grid-row: 3/5;
+    margin: 10px;
+    border-radius: 10px;
 }
 
 .plant-grid6 {
     background-image: url(../images/nos_plantes/J6.jfif);
     grid-column: 4;
     grid-row: 3/5;
+    margin: 10px;
+    border-radius: 10px;
 }
 
 
@@ -240,3 +308,73 @@ footer a.cgv {
     text-decoration: none;
     color: black;
 }
+
+.info-container {
+    width: 100%;
+}
+
+
+
+
+
+.conteneur-bouton {
+    display: flex;
+    justify-content: right;
+    align-items: flex-start;
+
+ /* Cela assure que le bouton est centré verticalement sur la page */
+}
+
+.bouton-en-savoir-plus {
+    padding: 12px;
+    margin: 1.7rem;
+    font-size: 15px;
+    background: rgba(0, 0, 0, 0.788);
+    color: floralwhite;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.bouton-en-savoir-plus:hover {
+    background-image: linear-gradient(to right, #000000 0%, #434343  51%, #000000  100%);
+    
+}
+
+.plant-details .info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Ajoutez ces styles pour les conteneurs des boutons "En savoir plus" à l'intérieur des plantes */
+.plant-details .plant-text {
+    flex-grow: 1;
+}
+
+.plant-details button.bouton-en-savoir-plus {
+    margin: 20px;
+    padding: 14px;
+    font-size: 15px;
+    background-color: #ffffff;
+    color: floralwhite;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.plant-details button.bouton-en-savoir-plus:hover {
+    background-color: #506b35;
+}
+
+
+
+
+body {
+    margin: 0 auto;
+}
+
+
